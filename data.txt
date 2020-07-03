@@ -1,0 +1,26 @@
+function VAR
+   Creates varible
+   Pass in (x, Addons, Code(Safe))
+    Examples
+    1. var I = new Var(7, "3", 200);
+      console.log(I.Addons);
+      console.log(I.Type);
+      console.log(I.FullValue);
+      console.log(I.string);
+      console.log(I.code); 
+      console.log(I.use);
+      console.log(I.number);
+       ---------
+    console:
+      false
+      "3"
+      number 
+      7 + Addons =  wal + Code =  MjAw 
+      false
+      MjAw
+      7
+      true
+      ------
+
+
+  

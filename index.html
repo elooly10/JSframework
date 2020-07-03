@@ -17,9 +17,7 @@
 
       this.string = isNaN(x);
       this.number = !isNaN(x);
-      this.set = typeof x;
       this.use = Number(x);
-      this.hasValues = true;
     }
     function math(x, To, y) {
       if (To === "+") {
@@ -79,17 +77,6 @@
         return Math.round(x);
       }
     }
-
-    var I = new Var(7, "wal", 200);
-    console.log(math(math(true, "Or", 3), "Not"));
-    console.log(I.Addons);
-    console.log(I.Type);
-    console.log(I.FullValue);
-    console.log(I.string);
   </script>
-  <body>
-    <h1>
-      This is a static template, there is no bundler or bundling involved!
-    </h1>
-  </body>
+  <body></body>
 </html>
