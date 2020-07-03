@@ -7,22 +7,11 @@
     <title>Static Template</title>
   </head>
   <script>
-    function Type(x) {
-      if (!x) {
-        return "ERROR =  Value X is not defined";
-      } else if (isNaN(x)) {
-        return "String";
-      } else if (!isNaN(x)) {
-        return "Number";
-      } else {
-        return "FATAL ERROR =  x is Not/And a number";
-      }
-    }
     function Var(x, addons, Code) {
       this.Value = x;
       this.FullValue =
         x + " + Addons =  " + addons + " + Code =  " + btoa(Code);
-      this.Type = Type(x);
+      this.Type = typeof x;
       this.Addons = addons;
       this.Code = btoa(Code);
 
