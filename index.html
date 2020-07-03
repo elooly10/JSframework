@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <script>
+    function Type(x) {
+      if (!x) {
+        return "ERROR =  Value X is not defined";
+      } else if (isNaN(x)) {
+        return "String";
+      } else if (!isNaN(x)) {
+        return "Number";
+      } else {
+        return "FATAL ERROR =  x is Not/And a number";
+      }
+    }
+    function Var(x, addons, Code) {
+      this.Value = x;
+      this.FullValue =
+        x + " + Addons =  " + addons + " + Code =  " + btoa(Code);
+      this.Type = Type(x);
+      this.Addons = addons;
+      this.Code = btoa(Code);
+
+      this.string = isNaN(x);
+      this.number = !isNaN(x);
+      this.set = typeof x;
+      this.use = Number(x);
+      this.hasValues = true;
+    }
+    function math(x, To, y) {
+      if (To === "+") {
+        return x + y;
+      }
+      if (To === "-") {
+        return x - y;
+      }
+      if (To === "*") {
+        return x * y;
+      }
+      if (To === "/") {
+        return x / y;
+      }
+      if (To === "And") {
+        return x === true && y === true;
+      }
+      if (To === "Or") {
+        return x === true || y === true;
+      }
+      if (To === "Not") {
+        return !x;
+      }
+      if (To === "Rem") {
+        return y % x;
+      }
+      if (To === "Exponet") {
+        return x ** y;
+      }
+      if (To == "Greater Then") {
+        return x > y;
+      }
+      if (To == "Less Then") {
+        return x < y;
+      }
+      if (To == "Greater Then OR Equal To") {
+        return x >= y;
+      }
+      if (To == "Less Then OR Equal To") {
+        return x <= y;
+      }
+      if (To == "Equal To") {
+        return x === y;
+      }
+      if (To == "Not Equal to") {
+        return !(x === y);
+      }
+      if (To == "Random") {
+        var Calc = Math.floor(Math.Random() * 2);
+        if ((Calc = 0)) {
+          return x;
+        } else {
+          return y;
+        }
+      }
+      if (To == "Round") {
+        return Math.round(x);
+      }
+    }
+
+    var I = new Var(7, "wal", 200);
+    console.log(math(math(true, "Or", 3), "Not"));
+    console.log(I.Addons);
+    console.log(I.Type);
+    console.log(I.FullValue);
+    console.log(I.string);
+  </script>
+  <body>
+    <h1>
+      This is a static template, there is no bundler or bundling involved!
+    </h1>
+  </body>
+</html>
